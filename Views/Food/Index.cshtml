@@ -1,0 +1,13 @@
+@model List<FoodOrderApp.Models.Food>
+
+<h2>Available Food Items</h2>
+<div>
+    @foreach (var food in Model)
+    {
+        <div style="margin-bottom: 20px;">
+            <img src="@food.ImageUrl" alt="@food.Name" style="width: 150px;" />
+            <h3>@food.Name</h3>
+            <p>Price: $@food.Price</p>
+        </div>
+    }
+</div>
